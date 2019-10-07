@@ -1,0 +1,220 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        //- link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        link(rel="stylesheet" type="text/css" href="static/css/main.css")
+        link(href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet")
+        title Technodeck
+    body
+        header
+            .container
+                .navbar
+                    .row
+                        .col-9.col-md-5.col-lg-3.logo
+                            img(src="static/img/logo/logo-copy.png", alt="Технодэк" class="logo")
+                        .col-2.col-md-6.col-lg-9.navigation
+                            .user-nav
+                                .info
+                                    p.tel +7 3852
+                                    a.mail(href="mailto:info@tehnodeck.ru") info@
+                                    p.addres Россия
+                                .menu
+                                    .hamburger
+                                        span ☰
+                                        nav.menu-items
+                                            a(href="#company") Компания
+                                            a(href="#production") Продукция
+                                            a(href="#equip") Оборудование
+                                    a.btn-callback(href="javascript:void(0)" data-toggle="modal" data-target="#callModal") Заказать звонок
+                        a.btn-mobile.col-1(href="javascript:void(0)" data-toggle="modal" data-target="#callModal")
+                            span
+                                img(src="static/img/svg/mob-button.svg", alt="")
+        <!-- Modal-->
+        .modal.fade(id="callModal" tabindex="-1" role="dialog" aria-labelledby="callleModalLabel" aria-hidden="true")
+            .modal-dialog(role="document")
+                .modal-content
+                    .modal-header
+                        h5.modal-title Закажите звонок или
+                            a(href="tel: +7 3852 ") позвоните нам!
+                        button.close(type="button" data-dismiss="modal" aria-label="Close")
+                            span(aria-hidden="true") &times;
+                    .modal-body
+                        .container
+                            .row
+                                .col-xl-12.text-center
+                                    p Ваше имя
+                                    input.inp(type="text")
+                                .col-xl-12.text-center
+                                    p Ваш телефон
+                                    input.inp(type="tel" maxlength="12" name="Телефон" required placeholder="+7 (___) ___-__-__" id="user_phone" class="user-phone" title="Формат: +7 (999) 999 99 99")
+                                .col-xl-12.text-center
+                                    p Удобное время для звонка
+                                    input.inp(type="text")
+                    .modal-footer
+                        button.btn-callback(type="button" data-dismiss="modal") Закрыть
+                        button.btn-callback(type="button") Отправить
+        main
+            .container-flud
+                .promo
+                    .thing_1
+                        .slider-item(style="background-image: url(static/img/promo/bitmap.png)")
+                            .container
+                                .row
+                                    .col-6.col-xl-6
+                                        h2 Поддоны для вибропресса
+                                        .slider-text
+                                            p Каким должен быть поддон для вибропресса: неприхотливым к условиям, долговечным и недрогим. Его материал должен передавать вибрацию, держать форму, быть устойчивым к влажности
+                        .slider-item(style="background-image: url(static/img/1.jpg)")
+                            .container
+                                .row
+                                    .col-6.col-xl-6
+                                        h2 Поддоны для вибропресса
+                                        .slider-text
+                                            p Каким должен быть поддон для вибропресса: неприхотливым к условиям, долговечным и недрогим. Его материал должен передавать вибрацию, держать форму, быть устойчивым к влажности
+                    .arrows-wrapper
+                        .slick-arrows
+                    ul.rainbow
+                        li.rainbow-item(data-aos="fade-right"  data-aos-offset="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="50"  data-aos-offset="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="100"  data-aos-offset="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="150"  data-aos-offset="50")
+
+                .products-info#production
+                    .container
+                        .row
+                            .col-6.col-xl-6.offset-6.offset-lg-6
+                                h2 Продукция Технодэк
+                                p Мы осуществляем весь комплекс услуг от поиска и подбора оборудования, инженерной проработки, до шеф-монтажа и пуско-наладки, гарантийного и пост-гарантийного обслуживания.
+                                    <br>
+                                    <br> Мы также производим нестандартное оборудование для комплексного решения задач заказчика.
+                                .btn-learn-more
+                                    a.more(href="#request") Оставить заявку
+                    ul.rainbow
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="100")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="150")
+
+                .advantages
+                    .container
+                        .row
+                            .col-xl-12
+                                h2 Преимущества<br>поддонов Технодэк
+                            .col-6.col-md-4
+                                .adv-item
+                                    .image-block
+                                        img(src="static/img/svg/adv/mres.svg?{{version}}", alt="Влагостойкость")
+                                    h3 Влагостойкость
+                                    p Не выпитывает влагу, не гниет, не деформируется
+                            .col-6.col-md-4
+                                .adv-item
+                                    .image-block
+                                        img(src="static/img/svg/adv/dur.svg", alt="Прочность")
+                                    h3 Прочность
+                                    p Выдерживает сверхвысокие нагрузки на изгиб
+                            .col-6.col-md-4
+                                .adv-item
+                                    .image-block
+                                        img(src="static/img/svg/adv/wres.svg", alt="Износостойкость")
+                                    h3 Износостойкость
+                                    p Обладает длительным сроком эксплуатации
+                            .col-6.col-md-4
+                                .adv-item
+                                    .image-block
+                                        img(src="static/img/svg/adv/tstab.svg", alt="Термостойкость")
+                                    h3 Термостойкость
+                                    p Может использоваться в сушильных и пропарочных камерах
+                            .col-6.col-md-4
+                                .adv-item
+                                    .image-block
+                                        img(src="static/img/svg/adv/chstab.svg", alt="Химостойкость")
+                                    h3 Химостойкость
+                                    p Высокое сопротивление щелочному и абразивному воздействию
+                            .col-6.col-md-4
+                                .adv-item
+                                    .image-block
+                                        img(src="static/img/svg/adv/profit.svg", alt="Экономичность")
+                                    h3 Экономичность
+                                    p Качество пластикового поддона по цене деревянного
+
+                .request#request
+                    .container
+                        h2 Оставить заявку
+                        form(action="post.php" method="post")
+                            .row
+                                .col-12
+                                    h3 Параметры поддона
+                                .col-12.col-md-9.col-xl-8
+                                    .inp-group
+                                        input.inp.inp-first(type="number" name="length" placeholder="Длина, мм")
+                                        input.inp(type="number" name="width" placeholder="Ширина, мм")
+                                        input.inp(type="number" name="heigth" placeholder="Высота, мм")
+                                .col-12
+                                    h3.last Как с нами связаться?
+                                .col-12.col-md-9.col-xl-8
+                                    .inp-group.last
+                                        input.inp.inp-first(type="text" name="fullname" placeholder="ФИО")
+                                        input.inp(type="tel" maxlength="12" name="tel" required placeholder="+7 (___) ___-__-__" id="user_phone" class="user-phone" title="Формат: +7 (999) 999 99 99")
+                                        input.inp(type="email" name="email" placeholder="Email")
+                                    textarea.inp.inp-text(name="comment" placeholder="Комментарий к заявке" rows="3")
+                                .col-12.col-md-3.col-xl-3.offset-xl-1
+                                    .block-info
+                                        img(src="static/img/svg/user.svg", alt="User")
+                                        p Наши менеджеры свяжутся с вами в самое ближйщее время. Спасибо за проявленный интерес к нашей продукции!
+                            .req-wrap
+                                input.btn-callback.req(type="submit" value="Отправить заявку")
+                    ul.rainbow
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="100")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="150")
+
+                .equip#equip
+                    .container
+                        .thing_2
+                            .slider-item(style="background-image: url(static/img/equip/other-products.png)")
+                            .slider-item(style="background-image: url(static/img/1.jpg)")
+                        .arrows-wrapper
+                            .slick-arrows_2
+                    ul.rainbow
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="100")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="150")
+                .seo-text#company
+                    .container
+                        .row
+                            .col-4
+                                .seo-img
+                                    img(src="static/img/1.jpg", alt="seo-img")
+                            .col-8
+                                    p Технодэк изготавливает технологические поддоны для вибропрессования на основе клееной прессованной древесины, которые являются расходным материалом при производстве мелкоштучных изделий из жесткого бетона (тротуарная плитка, строительные блоки, бордюры и т.д.) методом вибропрессования. <br>Поддоны предназначены для оснащения вибропрессов в качестве сменного оборудования при формовании методом немедленной распалубки вибропрессованных изделий из жестких бетонных смесей, а также транспортирования отформованных изделий на посты отвердения бетона и подачи готовых изделий на посты пакетирования продукции.<br>В зависимости от технологического процесса производства изделий из бетона, поддоны во время работы подвергаются вибрации, механическим нагрузкам, нахождению в среде с относительной влажностью воздуха до 100% и при температуре до 70-90°С. Соответственно поддон должен хорошо передавать вибрацию и иметь достаточную жесткость на изгиб, чтобы не прогибаться во время перемещения его со свежеотформованными изделиями. Всеми этими качествами обладают поддоны, производимые ООО «ТЕХНОДЭК»: клееная прессованная древесина отличается высокими прочностными характеристиками, кроме этого, конструкция поддона дополнительно усилена параллельным (по пласти) расположением волокон древесины по всей плоскости поддона, что исключает его прогиб.
+
+        footer
+            .container
+                .navbar.row
+                    .col-12.col-lg-3
+                        img(src="static/img/svg/logo-footer.svg", alt="Технодэк" class="logo")
+                    .col-12.col-lg-9
+                        .user-nav
+                            .info
+                                p.tel +7 3852 22-60-70
+                                a.mail(href="mailto:info@tehnodeck.ru") info@tehnodeck.ru
+                                p.addres Россия, Барнаул, пр. Калинина, 71
+                            .menu
+                                nav
+                                    a(href="#company") Компания
+                                    a(href="#production") Продукция
+                                    a(href="#equip") Оборудование
+                                a.btn-callback(href="javascript:void(0)" data-toggle="modal" data-target="#callModal") Заказать звонок
+            ul.rainbow
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="100" data-aos-offset="50")
+                        li.rainbow-item(data-aos="fade-right" data-aos-delay="150" data-aos-offset="50")
+
+
+    script(src="static/js/libs.min.js")
+    script(src="static/js/main.js")
